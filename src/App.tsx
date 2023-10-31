@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Board from "./components/Board";
+import Lottie from "lottie-react";
+import winn from "./assets/win.json";
 
 type SquareValue = "X" | "O" | null;
 
@@ -36,6 +38,11 @@ function Game() {
     );
   });
 
+  const style = {
+    height: 200,
+    widht: 100,
+  };
+
   return (
     <div className="game">
       <div className="game-board">
@@ -44,6 +51,7 @@ function Game() {
       <div className="game-info">
         <ol>{moves}</ol>
       </div>
+      <Lottie animationData={winn} loop={false} style={style} />
     </div>
   );
 }
