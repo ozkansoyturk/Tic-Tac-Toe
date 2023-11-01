@@ -46,6 +46,7 @@ function Game() {
   return (
     <div className="game">
       <h1>Tic Tac Toe</h1>
+      <h1>Tic Tac Toe TEST</h1>
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
