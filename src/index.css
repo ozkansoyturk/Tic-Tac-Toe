@@ -14,10 +14,17 @@ body {
 header {
   display: flex;
   justify-content: center;
+  height: 10vh;
 }
 
 .debug {
   border: 1px solid red;
+}
+
+h1 {
+  color: white;
+  font-size: 2rem;
+  font-family: "Space Mono", monospace;
 }
 
 .square {

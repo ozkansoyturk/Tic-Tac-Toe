@@ -1,7 +1,5 @@
 import { useState } from "react";
 import Board from "./components/Board";
-import Lottie from "lottie-react";
-import winn from "./assets/win.json";
 
 type SquareValue = "X" | "O" | null;
 
@@ -38,32 +36,24 @@ function Game() {
     );
   });
 
-  const style = {
-    height: 200,
-    widht: 100,
-  };
-
   return (
     <>
       <header>
         <h1>Tic Tac Toe</h1>
       </header>
       <main>
-        <section>
-          <div className="game">
-            <div className="game-board">
-              <Board
-                xIsNext={xIsNext}
-                squares={currentSquares}
-                onPlay={handlePlay}
-              />
-            </div>
-            <div className="game-info">
-              <ol>{moves}</ol>
-            </div>
-            <Lottie animationData={winn} loop={false} style={style} />
+        <div className="game">
+          <div className="game-board">
+            <Board
+              xIsNext={xIsNext}
+              squares={currentSquares}
+              onPlay={handlePlay}
+            />
           </div>
-        </section>
+          <div className="game-info">
+            <ol>{moves}</ol>
+          </div>
+        </div>
       </main>
       <footer>
         <div>
